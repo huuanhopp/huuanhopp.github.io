@@ -334,7 +334,28 @@ class Hero {
                 }
             }
 
+            /* Tablet styles */
+            @media (max-width: 1024px) {
+                .hero-content {
+                    gap: 3rem;
+                }
+                
+                .hero-title {
+                    font-size: var(--font-size-4xl);
+                }
+                
+                .hero-description {
+                    max-width: 100%;
+                }
+            }
+
+            /* Mobile styles */
             @media (max-width: 768px) {
+                .hero {
+                    min-height: 90vh;
+                    padding-top: 60px;
+                }
+                
                 .hero-content {
                     grid-template-columns: 1fr;
                     text-align: center;
@@ -342,32 +363,117 @@ class Hero {
                 }
 
                 .hero-title {
-                    font-size: var(--font-size-4xl);
+                    font-size: var(--font-size-3xl);
+                    margin-bottom: 0.75rem;
                 }
 
                 .hero-subtitle {
                     font-size: var(--font-size-xl);
                     justify-content: center;
+                    min-height: 2.5rem;
+                }
+
+                .hero-description {
+                    font-size: var(--font-size-base);
+                    margin-bottom: 2rem;
+                    max-width: 100%;
                 }
 
                 .hero-cta {
                     flex-direction: column;
                     align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 2rem;
+                }
+                
+                .btn {
+                    width: 100%;
+                    max-width: 280px;
+                    justify-content: center;
                 }
 
                 .hero-stats {
                     justify-content: center;
-                    gap: 2rem;
+                    gap: 1.5rem;
+                    flex-wrap: wrap;
+                    padding-top: 1.5rem;
+                }
+                
+                .stat {
+                    min-width: 80px;
                 }
 
                 .hero-avatar {
-                    width: 250px;
-                    height: 250px;
+                    width: 220px;
+                    height: 220px;
                 }
 
                 .avatar-placeholder {
-                    width: 150px;
-                    height: 150px;
+                    width: 140px;
+                    height: 140px;
+                }
+                
+                .avatar-placeholder svg {
+                    width: 80px;
+                    height: 80px;
+                }
+                
+                .hero-scroll-indicator {
+                    bottom: 1rem;
+                }
+            }
+            
+            /* Small mobile styles */
+            @media (max-width: 480px) {
+                .hero {
+                    min-height: 85vh;
+                }
+                
+                .hero-title {
+                    font-size: var(--font-size-2xl);
+                    line-height: 1.3;
+                }
+
+                .hero-subtitle {
+                    font-size: var(--font-size-lg);
+                    min-height: 2rem;
+                }
+
+                .hero-description {
+                    font-size: var(--font-size-sm);
+                    line-height: 1.6;
+                }
+                
+                .btn {
+                    padding: 0.75rem 1.5rem;
+                    font-size: var(--font-size-sm);
+                }
+
+                .hero-stats {
+                    gap: 1rem;
+                }
+                
+                .stat-number {
+                    font-size: var(--font-size-2xl);
+                }
+                
+                .stat-label {
+                    font-size: var(--font-size-xs);
+                }
+
+                .hero-avatar {
+                    width: 180px;
+                    height: 180px;
+                }
+
+                .avatar-placeholder {
+                    width: 120px;
+                    height: 120px;
+                }
+                
+                .avatar-placeholder svg {
+                    width: 60px;
+                    height: 60px;
                 }
             }
         `;

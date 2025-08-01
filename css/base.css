@@ -566,9 +566,15 @@ a:hover {
 }
 
 /* Responsive Utilities */
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
     .section {
-        padding: var(--space-4xl) 0;
+        padding: var(--space-5xl) 0;
     }
     
     .container {
@@ -578,10 +584,66 @@ a:hover {
     h1 { font-size: var(--font-size-4xl); }
     h2 { font-size: var(--font-size-3xl); }
     h3 { font-size: var(--font-size-2xl); }
+    h4 { font-size: var(--font-size-xl); }
+    
+    .btn {
+        padding: var(--space-md) var(--space-xl);
+        font-size: var(--font-size-base);
+    }
+    
+    .grid {
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: var(--space-4xl) 0;
+    }
+    
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+    h3 { font-size: var(--font-size-xl); }
+    h4 { font-size: var(--font-size-lg); }
     
     .btn {
         padding: var(--space-sm) var(--space-lg);
         font-size: var(--font-size-sm);
+    }
+    
+    .grid {
+        gap: var(--space-md);
+    }
+    
+    .card {
+        border-radius: var(--radius-lg);
+    }
+    
+    .card-header,
+    .card-content,
+    .card-footer {
+        padding: var(--space-md);
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: var(--space-md);
+    }
+    
+    .mobile-menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
 

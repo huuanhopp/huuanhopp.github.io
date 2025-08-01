@@ -366,9 +366,42 @@ class Experience {
                 gap: 0.5rem;
             }
 
+            /* Tablet styles */
+            @media (max-width: 1024px) {
+                .experience-timeline {
+                    max-width: 800px;
+                }
+                
+                .timeline-card {
+                    padding: 1.75rem;
+                }
+            }
+
+            /* Mobile styles */
             @media (max-width: 768px) {
+                .section {
+                    padding: var(--space-4xl) 0;
+                }
+                
+                .section-header {
+                    margin-bottom: 3rem;
+                }
+                
+                .section-title {
+                    font-size: var(--font-size-3xl);
+                }
+                
+                .section-subtitle {
+                    font-size: var(--font-size-base);
+                }
+
                 .experience-timeline::before {
                     left: 20px;
+                    width: 3px;
+                }
+
+                .timeline-item {
+                    margin-bottom: 3rem;
                 }
 
                 .timeline-left .timeline-content,
@@ -380,18 +413,92 @@ class Experience {
 
                 .timeline-left .timeline-badge,
                 .timeline-right .timeline-badge {
-                    left: -5px;
+                    left: 6px;
                     right: auto;
                     width: 40px;
                     height: 40px;
+                    border-width: 2px;
                 }
 
                 .timeline-card {
                     padding: 1.5rem;
+                    border-radius: 8px;
                 }
 
+                .card-title {
+                    font-size: var(--font-size-lg);
+                }
+                
+                .company-name {
+                    font-size: var(--font-size-base);
+                }
+                
+                .achievements-title, .tech-title {
+                    font-size: var(--font-size-sm);
+                    font-weight: 700;
+                }
+                
+                .tech-badges {
+                    gap: 0.25rem;
+                }
+                
+                .badge {
+                    font-size: var(--font-size-xs);
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+            
+            /* Small mobile styles */
+            @media (max-width: 480px) {
+                .section {
+                    padding: var(--space-3xl) 0;
+                }
+                
                 .section-title {
-                    font-size: var(--font-size-3xl);
+                    font-size: var(--font-size-2xl);
+                }
+                
+                .experience-timeline::before {
+                    left: 15px;
+                }
+                
+                .timeline-left .timeline-content,
+                .timeline-right .timeline-content {
+                    margin-left: 50px;
+                }
+                
+                .timeline-left .timeline-badge,
+                .timeline-right .timeline-badge {
+                    left: 1px;
+                    width: 32px;
+                    height: 32px;
+                }
+                
+                .timeline-badge svg {
+                    width: 16px;
+                    height: 16px;
+                }
+                
+                .timeline-card {
+                    padding: 1rem;
+                }
+                
+                .card-title {
+                    font-size: var(--font-size-base);
+                    line-height: 1.3;
+                }
+                
+                .company-name {
+                    font-size: var(--font-size-sm);
+                }
+                
+                .experience-description {
+                    font-size: var(--font-size-sm);
+                }
+                
+                .achievement-item {
+                    font-size: var(--font-size-sm);
+                    padding-left: 1rem;
                 }
             }
         `;
