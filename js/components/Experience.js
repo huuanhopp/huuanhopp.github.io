@@ -244,15 +244,34 @@ class Experience {
                 position: relative;
                 background: var(--bg-primary);
                 border: 1px solid var(--border-color);
-                border-radius: 12px;
-                padding: 2rem;
-                box-shadow: var(--shadow-md);
-                transition: all 0.3s ease;
+                border-radius: 16px;
+                padding: 2.5rem;
+                box-shadow: var(--shadow-sm);
+                transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                overflow: hidden;
+            }
+
+            .timeline-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: var(--gradient-primary);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.4s ease;
             }
 
             .timeline-card:hover {
-                transform: translateY(-4px);
-                box-shadow: var(--shadow-lg);
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-xl);
+                border-color: rgba(102, 126, 234, 0.2);
+            }
+
+            .timeline-card:hover::before {
+                transform: scaleX(1);
             }
 
             .timeline-badge {
@@ -311,15 +330,34 @@ class Experience {
                 font-style: italic;
             }
 
+            .card-header {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid var(--border-color);
+                margin-bottom: 1.5rem;
+            }
+
+            .card-content {
+                padding: 0;
+            }
+
+            .card-title {
+                font-size: var(--font-size-xl);
+                font-weight: 700;
+                color: var(--text-primary);
+                margin-bottom: 1rem;
+                line-height: 1.3;
+            }
+
             .period {
                 display: inline-block;
-                padding: 0.25rem 0.75rem;
-                background: var(--bg-tertiary);
-                color: var(--text-secondary);
-                border-radius: 20px;
+                padding: 0.375rem 1rem;
+                background: var(--gradient-primary);
+                color: white;
+                border-radius: 25px;
                 font-size: var(--font-size-sm);
-                font-weight: 500;
-                margin-top: 0.5rem;
+                font-weight: 600;
+                margin-top: 0.75rem;
+                box-shadow: var(--shadow-sm);
             }
 
             .experience-description {
@@ -346,24 +384,56 @@ class Experience {
 
             .achievement-item {
                 position: relative;
-                padding-left: 1.5rem;
-                margin-bottom: 0.5rem;
+                padding: 0.5rem 0 0.5rem 2rem;
+                margin-bottom: 0.75rem;
                 color: var(--text-secondary);
-                line-height: 1.5;
+                line-height: 1.6;
+                background: var(--bg-secondary);
+                border-radius: 8px;
+                border-left: 3px solid var(--primary-color);
+                transition: all 0.3s ease;
+            }
+
+            .achievement-item:hover {
+                background: var(--bg-tertiary);
+                transform: translateX(4px);
             }
 
             .achievement-item::before {
-                content: '→';
+                content: '✓';
                 position: absolute;
-                left: 0;
+                left: 0.75rem;
+                top: 0.5rem;
                 color: var(--primary-color);
                 font-weight: bold;
+                font-size: var(--font-size-sm);
             }
 
             .tech-badges {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.5rem;
+            }
+
+            .badge {
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .badge::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .badge:hover::before {
+                left: 100%;
             }
 
             /* Tablet styles */
@@ -422,12 +492,18 @@ class Experience {
                 }
 
                 .timeline-card {
-                    padding: 1.5rem;
-                    border-radius: 8px;
+                    padding: 2rem;
+                    border-radius: 12px;
+                }
+
+                .card-header {
+                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
                 }
 
                 .card-title {
                     font-size: var(--font-size-lg);
+                    margin-bottom: 0.75rem;
                 }
                 
                 .company-name {
@@ -438,14 +514,25 @@ class Experience {
                     font-size: var(--font-size-sm);
                     font-weight: 700;
                 }
+
+                .achievement-item {
+                    padding: 0.375rem 0 0.375rem 1.75rem;
+                    margin-bottom: 0.5rem;
+                    font-size: var(--font-size-sm);
+                }
+
+                .achievement-item::before {
+                    left: 0.5rem;
+                    font-size: var(--font-size-xs);
+                }
                 
                 .tech-badges {
-                    gap: 0.25rem;
+                    gap: 0.375rem;
                 }
                 
                 .badge {
                     font-size: var(--font-size-xs);
-                    padding: 0.25rem 0.5rem;
+                    padding: 0.375rem 0.75rem;
                 }
             }
             
