@@ -353,7 +353,7 @@ class Hero {
             @media (max-width: 768px) {
                 .hero {
                     min-height: 90vh;
-                    padding-top: 60px;
+                    padding-top: 100px;
                 }
                 
                 .hero-content {
