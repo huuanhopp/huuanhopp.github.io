@@ -94,45 +94,49 @@ class Experience {
     }
 
     renderExperienceItem(experience, index) {
-        const isEven = index % 2 === 0;
         return `
-            <div class="timeline-item ${isEven ? 'timeline-left' : 'timeline-right'}" data-experience="${experience.id}">
+            <div class="timeline-item" data-experience="${experience.id}">
                 <div class="timeline-content">
                     <div class="timeline-card card">
-
-                        
                         <div class="card-header">
-                            <h3 class="card-title">${experience.title}</h3>
-                            <div class="company-info">
-                                <span class="company-name">${experience.company}</span>
-                                <span class="company-location">${experience.location}</span>
+                            <div class="header-main">
+                                <div class="title-section">
+                                    <h3 class="card-title">${experience.title}</h3>
+                                    <div class="company-info">
+                                        <span class="company-name">${experience.company}</span>
+                                        <span class="company-location">${experience.location}</span>
+                                    </div>
+                                </div>
+                                <div class="period-section">
+                                    <span class="period">${experience.period}</span>
+                                    <div class="timeline-badge ${experience.type}">
+                                        ${this.getIcon(experience.type)}
+                                    </div>
+                                </div>
                             </div>
-                            <span class="period">${experience.period}</span>
+                            <p class="experience-description">${experience.description}</p>
                         </div>
                         
                         <div class="card-content">
-                            <p class="experience-description">${experience.description}</p>
-                            
-                            <div class="achievements">
-                                <h4 class="achievements-title">Key Achievements</h4>
-                                <ul class="achievements-list">
-                                    ${experience.achievements.map(achievement => 
-                                        `<li class="achievement-item">${achievement}</li>`
-                                    ).join('')}
-                                </ul>
-                            </div>
-                            
-                            <div class="technologies">
-                                <h4 class="tech-title">Technologies Used</h4>
-                                <div class="tech-badges">
-                                    ${experience.technologies.map(tech => 
-                                        `<span class="badge badge-primary">${tech}</span>`
-                                    ).join('')}
+                            <div class="content-grid">
+                                <div class="achievements">
+                                    <h4 class="achievements-title">Key Achievements</h4>
+                                    <ul class="achievements-list">
+                                        ${experience.achievements.map(achievement => 
+                                            `<li class="achievement-item">${achievement}</li>`
+                                        ).join('')}
+                                    </ul>
+                                </div>
+                                
+                                <div class="technologies">
+                                    <h4 class="tech-title">Technologies Used</h4>
+                                    <div class="tech-badges">
+                                        ${experience.technologies.map(tech => 
+                                            `<span class="badge badge-primary">${tech}</span>`
+                                        ).join('')}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="timeline-badge ${experience.type}">
-                            ${this.getIcon(experience.type)}
                         </div>
                     </div>
                 </div>
@@ -209,20 +213,21 @@ class Experience {
                 content: '';
                 position: absolute;
                 top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 2px;
+                left: 30px;
+                width: 3px;
                 height: 100%;
                 background: var(--gradient-primary);
                 z-index: 0;
+                border-radius: 2px;
             }
 
             .timeline-item {
                 position: relative;
-                margin-bottom: 4rem;
+                margin-bottom: 3rem;
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
                 transition: all 0.6s ease;
+                margin-left: 80px;
             }
 
             .timeline-item.animate-in {
@@ -230,13 +235,8 @@ class Experience {
                 transform: translateY(0);
             }
 
-            .timeline-left .timeline-content {
-                margin-right: 55%;
-                text-align: right;
-            }
-
-            .timeline-right .timeline-content {
-                margin-left: 55%;
+            .timeline-content {
+                width: 100%;
                 text-align: left;
             }
 
@@ -274,9 +274,37 @@ class Experience {
                 transform: scaleX(1);
             }
 
+            .header-main {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .title-section {
+                flex: 1;
+            }
+
+            .period-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1rem;
+                flex-shrink: 0;
+            }
+
+            .content-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+
             .timeline-badge {
                 position: absolute;
-                top: 50%;
+                left: -105px;
+                top: 2rem;
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
@@ -287,16 +315,12 @@ class Experience {
                 z-index: 10;
                 box-shadow: var(--shadow-md);
                 border: 3px solid var(--bg-primary);
+                transition: all 0.3s ease;
             }
 
-            .timeline-left .timeline-badge {
-                right: -75px;
-                transform: translateY(-50%);
-            }
-
-            .timeline-right .timeline-badge {
-                left: -75px;
-                transform: translateY(-50%);
+            .timeline-card:hover .timeline-badge {
+                transform: scale(1.1);
+                box-shadow: var(--shadow-lg);
             }
 
             .timeline-badge.current {
@@ -472,20 +496,11 @@ class Experience {
 
                 .timeline-item {
                     margin-bottom: 3rem;
-                }
-
-                .timeline-left .timeline-content,
-                .timeline-right .timeline-content {
                     margin-left: 60px;
-                    margin-right: 0;
-                    text-align: left;
                 }
 
-                .timeline-left .timeline-badge,
-                .timeline-right .timeline-badge {
-                    left: 21.5px;
-                    right: auto;
-                    transform: translateX(-50%) translateY(-50%);
+                .timeline-badge {
+                    left: -70px;
                     width: 40px;
                     height: 40px;
                     border-width: 2px;
@@ -494,6 +509,23 @@ class Experience {
                 .timeline-card {
                     padding: 2rem;
                     border-radius: 12px;
+                }
+
+                .header-main {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                .period-section {
+                    align-items: flex-start;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .content-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
                 }
 
                 .card-header {
@@ -550,15 +582,12 @@ class Experience {
                     left: 15px;
                 }
                 
-                .timeline-left .timeline-content,
-                .timeline-right .timeline-content {
+                .timeline-item {
                     margin-left: 50px;
                 }
                 
-                .timeline-left .timeline-badge,
-                .timeline-right .timeline-badge {
-                    left: 16.5px;
-                    transform: translateX(-50%) translateY(-50%);
+                .timeline-badge {
+                    left: -60px;
                     width: 32px;
                     height: 32px;
                 }
@@ -569,7 +598,7 @@ class Experience {
                 }
                 
                 .timeline-card {
-                    padding: 1rem;
+                    padding: 1.5rem;
                 }
                 
                 .card-title {
@@ -587,7 +616,11 @@ class Experience {
                 
                 .achievement-item {
                     font-size: var(--font-size-sm);
-                    padding-left: 1rem;
+                    padding-left: 1.5rem;
+                }
+
+                .achievement-item::before {
+                    left: 0.5rem;
                 }
             }
         `;

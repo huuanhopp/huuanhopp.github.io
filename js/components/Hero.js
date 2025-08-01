@@ -1,10 +1,10 @@
 class Hero {
     constructor() {
         this.typewriterText = [
+            "Senior React Native",
             "React Native Team Leader",
-            "Mobile App Developer", 
+            "Mobile App Developer",
             "Frontend Developer",
-            "Tech Innovator"
         ];
         this.currentTextIndex = 0;
         this.currentCharIndex = 0;
@@ -101,11 +101,11 @@ class Hero {
         if (!typewriterElement) return;
 
         const currentText = this.typewriterText[this.currentTextIndex];
-        
+
         if (this.isDeleting) {
             typewriterElement.textContent = currentText.substring(0, this.currentCharIndex - 1);
             this.currentCharIndex--;
-            
+
             if (this.currentCharIndex === 0) {
                 this.isDeleting = false;
                 this.currentTextIndex = (this.currentTextIndex + 1) % this.typewriterText.length;
@@ -116,7 +116,7 @@ class Hero {
         } else {
             typewriterElement.textContent = currentText.substring(0, this.currentCharIndex + 1);
             this.currentCharIndex++;
-            
+
             if (this.currentCharIndex === currentText.length) {
                 setTimeout(() => {
                     this.isDeleting = true;
@@ -131,7 +131,7 @@ class Hero {
     attachEventListeners() {
         // Start typewriter effect
         this.startTypewriter();
-        
+
         // Scroll indicator click
         const scrollIndicator = document.querySelector('.hero-scroll-indicator');
         if (scrollIndicator) {
