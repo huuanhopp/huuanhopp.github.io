@@ -213,7 +213,7 @@ class Experience {
                 width: 2px;
                 height: 100%;
                 background: var(--gradient-primary);
-                z-index: 1;
+                z-index: 5;
             }
 
             .timeline-item {
@@ -264,8 +264,9 @@ class Experience {
                 align-items: center;
                 justify-content: center;
                 color: white;
-                z-index: 2;
+                z-index: 10;
                 box-shadow: var(--shadow-md);
+                border: 3px solid var(--bg-primary);
             }
 
             .timeline-left .timeline-badge {
