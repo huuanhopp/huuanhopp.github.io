@@ -13,9 +13,8 @@ class Hero {
     }
 
     init() {
-        this.render();
-        this.startTypewriter();
-        this.attachEventListeners();
+        // Component will be rendered by main app
+        // Typewriter and event listeners will be attached after render
     }
 
     render() {
@@ -130,6 +129,9 @@ class Hero {
     }
 
     attachEventListeners() {
+        // Start typewriter effect
+        this.startTypewriter();
+        
         // Scroll indicator click
         const scrollIndicator = document.querySelector('.hero-scroll-indicator');
         if (scrollIndicator) {

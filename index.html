@@ -3,112 +3,778 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luong Huu Anh - Experienced React Native Developer & Team Leader with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
-    <meta name="keywords" content="React Native Developer, Mobile App Developer, Team Leader, JavaScript, iOS, Android, Vietnam Developer">
+    <title>Luong Huu Anh - React Native Developer & Team Leader</title>
+    <meta name="description" content="Experienced React Native developer with 5+ years of expertise in mobile app development, team leadership, and system architecture.">
+    <meta name="keywords" content="React Native, Mobile Developer, Team Leader, JavaScript, iOS, Android">
     <meta name="author" content="Luong Huu Anh">
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://huuanhopp.github.io/">
     <meta property="og:title" content="Luong Huu Anh - React Native Developer & Team Leader">
-    <meta property="og:description" content="Experienced React Native Developer with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
-    <meta property="og:image" content="https://huuanhopp.github.io/assets/og-image.jpg">
+    <meta property="og:description" content="Experienced React Native developer with 5+ years of expertise in mobile app development, team leadership, and system architecture.">
+    <meta property="og:image" content="https://huuanhopp.github.io/images/profile.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://huuanhopp.github.io/">
     <meta property="twitter:title" content="Luong Huu Anh - React Native Developer & Team Leader">
-    <meta property="twitter:description" content="Experienced React Native Developer with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
-    <meta property="twitter:image" content="https://huuanhopp.github.io/assets/og-image.jpg">
-
-    <title>Luong Huu Anh - React Native Developer & Team Leader</title>
+    <meta property="twitter:description" content="Experienced React Native developer with 5+ years of expertise in mobile app development, team leadership, and system architecture.">
+    <meta property="twitter:image" content="https://huuanhopp.github.io/images/profile.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Main Styles -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Preload critical scripts -->
-    <link rel="preload" href="js/app.js" as="script">
-
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "Luong Huu Anh",
-        "jobTitle": "React Native Developer & Team Leader",
-        "description": "Experienced React Native Developer with 5+ years in mobile app development",
-        "url": "https://huuanhopp.github.io/",
-        "sameAs": [
-            "https://linkedin.com/in/luonghuuanh",
-            "https://github.com/huuanhopp"
-        ],
-        "knowsAbout": [
-            "React Native",
-            "Mobile App Development",
-            "Team Leadership",
-            "JavaScript",
-            "Redux",
-            "Firebase",
-            "iOS Development",
-            "Android Development"
-        ],
-        "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of Transport and Communications",
-            "location": "Vietnam"
-        },
-        "award": [
-            "Employee of the Year 2022",
-            "Third Prize - Scientific Research Competition 2020",
-            "Second Prize - Computer Science Olympiad 2020"
-        ]
-    }
-    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/base.css" as="style">
+    <link rel="preload" href="js/components/Header.js" as="script">
 </head>
 <body>
-    <!-- Content will be dynamically loaded by JavaScript -->
-
-    <!-- Fallback content for users with JavaScript disabled -->
-    <noscript>
-        <div style="text-align: center; padding: 4rem 2rem; font-family: 'Inter', sans-serif;">
-            <h1>Luong Huu Anh</h1>
-            <h2>React Native Developer & Team Leader</h2>
-            <p>This portfolio requires JavaScript to display properly. Please enable JavaScript in your browser.</p>
-            <p>Contact: <a href="mailto:luonghuuanh.dev@gmail.com">luonghuuanh.dev@gmail.com</a></p>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h2 class="loading-title">Luong Huu Anh</h2>
+            <p class="loading-subtitle">Loading Portfolio...</p>
         </div>
-    </noscript>
+    </div>
 
-    <!-- Load JavaScript components -->
+    <!-- Main Content will be injected here by JavaScript -->
+    <div id="app"></div>
+
+    <!-- Scripts -->
     <script src="js/components/Header.js"></script>
     <script src="js/components/Hero.js"></script>
     <script src="js/components/Experience.js"></script>
     <script src="js/components/Skills.js"></script>
     <script src="js/components/Projects.js"></script>
     <script src="js/components/Contact.js"></script>
-
-    <!-- Main application script -->
-    <script src="js/app.js"></script>
-
-    <!-- Analytics (Optional - add your tracking ID) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_TRACKING_ID');
+        class Portfolio {
+            constructor() {
+                this.components = {};
+                this.isLoaded = false;
+                this.init();
+            }
+
+            async init() {
+                try {
+                    // Show loading screen
+                    this.showLoadingScreen();
+
+                    // Initialize components
+                    await this.initializeComponents();
+
+                    // Render the portfolio
+                    this.render();
+
+                    // Apply all styles
+                    this.applyStyles();
+
+                    // Setup global event listeners
+                    this.setupGlobalListeners();
+
+                    // Initialize component event listeners
+                    this.initializeComponentListeners();
+
+                    // Hide loading screen
+                    this.hideLoadingScreen();
+
+                    this.isLoaded = true;
+
+                    console.log('Portfolio loaded successfully!');
+                } catch (error) {
+                    console.error('Error initializing portfolio:', error);
+                    this.showError();
+                }
+            }
+
+            showLoadingScreen() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'flex';
+                }
+            }
+
+            hideLoadingScreen() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('fade-out');
+                    setTimeout(() => {
+                        loadingScreen.remove();
+                    }, 500);
+                }
+            }
+
+            showError() {
+                document.body.innerHTML = `
+                    <div class="error-screen">
+                        <div class="error-content">
+                            <h1>Oops! Something went wrong</h1>
+                            <p>Please refresh the page to try again.</p>
+                            <button onclick="window.location.reload()" class="btn btn-primary">Refresh Page</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            async initializeComponents() {
+                // Initialize all components
+                this.components.header = new Header();
+                this.components.hero = new Hero();
+                this.components.experience = new Experience();
+                this.components.skills = new Skills();
+                this.components.projects = new Projects();
+                this.components.contact = new Contact();
+
+                // Wait a bit for components to initialize
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+
+            render() {
+                const portfolioHTML = `
+                    ${this.components.header.render()}
+                    <main class="main-content">
+                        ${this.components.hero.render()}
+                        ${this.renderAboutSection()}
+                        ${this.components.experience.render()}
+                        ${this.components.skills.render()}
+                        ${this.components.projects.render()}
+                        ${this.components.contact.render()}
+                    </main>
+                    ${this.renderFooter()}
+                `;
+
+                const app = document.getElementById('app');
+                if (app) {
+                    app.innerHTML = portfolioHTML;
+                } else {
+                    document.body.innerHTML = portfolioHTML;
+                }
+            }
+
+            initializeComponentListeners() {
+                // Initialize event listeners for all components
+                try {
+                    this.components.header.attachEventListeners();
+                    this.components.hero.attachEventListeners();
+                    this.components.experience.attachEventListeners();
+                    this.components.skills.attachEventListeners();
+                    this.components.projects.attachEventListeners();
+                    this.components.contact.attachEventListeners();
+                } catch (error) {
+                    console.warn('Some component listeners failed to initialize:', error);
+                }
+            }
+
+            renderAboutSection() {
+                return `
+                    <section id="about" class="section section-alt">
+                        <div class="container">
+                            <div class="about-content grid grid-2">
+                                <div class="about-text">
+                                    <h2 class="section-title">About Me</h2>
+                                    <p class="about-description">
+                                        I'm a passionate React Native developer with over 5 years of experience in mobile app development.
+                                        I specialize in creating high-performance, scalable mobile applications that provide exceptional user experiences.
+                                    </p>
+                                    <p class="about-description">
+                                        Throughout my career, I've had the privilege of leading development teams, mentoring junior developers,
+                                        and working on projects that have reached millions of users. I believe in writing clean, maintainable code
+                                        and staying up-to-date with the latest technologies and best practices.
+                                    </p>
+
+                                    <div class="about-highlights">
+                                        <div class="highlight-item">
+                                            <h4>Leadership Experience</h4>
+                                            <p>Led teams of up to 8 members across multiple successful projects</p>
+                                        </div>
+                                        <div class="highlight-item">
+                                            <h4>Performance Focus</h4>
+                                            <p>Specialized in optimization techniques and scalable architecture</p>
+                                        </div>
+                                        <div class="highlight-item">
+                                            <h4>Industry Impact</h4>
+                                            <p>Apps I've worked on have achieved 1M+ downloads and high ratings</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="about-cta">
+                                        <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                                        <a href="#projects" class="btn btn-secondary">View My Work</a>
+                                    </div>
+                                </div>
+
+                                <div class="about-stats">
+                                    <div class="stats-grid">
+                                        <div class="stat-box">
+                                            <div class="stat-number">5+</div>
+                                            <div class="stat-label">Years Experience</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-number">15+</div>
+                                            <div class="stat-label">Projects Completed</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-number">1M+</div>
+                                            <div class="stat-label">App Downloads</div>
+                                        </div>
+                                        <div class="stat-box">
+                                            <div class="stat-number">3</div>
+                                            <div class="stat-label">Awards Won</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="education-info">
+                                        <h3>Education</h3>
+                                        <div class="education-item">
+                                            <h4>Bachelor of Information Technology</h4>
+                                            <p>University of Transport and Communications</p>
+                                            <span class="education-year">2017 - 2021</span>
+                                            <span class="education-gpa">GPA: 3.15/4.0</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="awards-info">
+                                        <h3>Awards & Recognition</h3>
+                                        <ul class="awards-list">
+                                            <li>Employee of the Year (2022)</li>
+                                            <li>Third Prize - Scientific Research Competition (2020)</li>
+                                            <li>Second Prize - Computer Science Olympiad (2020)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            }
+
+            renderFooter() {
+                return `
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="footer-content">
+                                <div class="footer-brand">
+                                    <h3>Luong Huu Anh</h3>
+                                    <p>React Native Developer & Team Leader</p>
+                                </div>
+
+                                <div class="footer-links">
+                                    <div class="footer-section">
+                                        <h4>Navigation</h4>
+                                        <ul>
+                                            <li><a href="#home">Home</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#experience">Experience</a></li>
+                                            <li><a href="#skills">Skills</a></li>
+                                            <li><a href="#projects">Projects</a></li>
+                                            <li><a href="#contact">Contact</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="footer-section">
+                                        <h4>Connect</h4>
+                                        <ul>
+                                            <li><a href="mailto:luonghuuanh.dev@gmail.com">Email</a></li>
+                                            <li><a href="https://linkedin.com/in/luonghuuanh" target="_blank">LinkedIn</a></li>
+                                            <li><a href="https://github.com/huuanhopp" target="_blank">GitHub</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-bottom">
+                                <p>&copy; 2025 Luong Huu Anh. All rights reserved.</p>
+                                <p>Built with vanilla JavaScript and modern CSS</p>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            }
+
+            applyStyles() {
+                const allStyles = `
+                    ${this.getLoadingStyles()}
+                    ${this.getAboutStyles()}
+                    ${this.getFooterStyles()}
+                    ${this.components.header.getStyles()}
+                    ${this.components.hero.getStyles()}
+                    ${this.components.experience.getStyles()}
+                    ${this.components.skills.getStyles()}
+                    ${this.components.projects.getStyles()}
+                    ${this.components.contact.getStyles()}
+                `;
+
+                const styleElement = document.createElement('style');
+                styleElement.textContent = allStyles;
+                document.head.appendChild(styleElement);
+            }
+
+            setupGlobalListeners() {
+                // Smooth scrolling for all anchor links
+                document.addEventListener('click', (e) => {
+                    if (e.target.matches('a[href^="#"]') || e.target.closest('a[href^="#"]')) {
+                        e.preventDefault();
+                        const link = e.target.matches('a[href^="#"]') ? e.target : e.target.closest('a[href^="#"]');
+                        const targetId = link.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
+                            const targetPosition = targetElement.offsetTop - headerHeight;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        // Close any open modals
+                        const modal = document.querySelector('.modal-overlay');
+                        if (modal) {
+                            modal.classList.remove('show');
+                            setTimeout(() => modal.remove(), 300);
+                        }
+                    }
+                });
+
+                // Scroll to top functionality
+                this.setupScrollToTop();
+            }
+
+            setupScrollToTop() {
+                // Create scroll to top button
+                const scrollToTopHTML = `
+                    <button id="scroll-to-top" class="scroll-to-top" title="Back to top">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 14l5-5 5 5"></path>
+                        </svg>
+                    </button>
+                `;
+
+                document.body.insertAdjacentHTML('beforeend', scrollToTopHTML);
+
+                const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+                // Show/hide scroll to top button
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.add('show');
+                    } else {
+                        scrollToTopBtn.classList.remove('show');
+                    }
+                });
+
+                // Scroll to top functionality
+                scrollToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            getLoadingStyles() {
+                return `
+                    .loading-screen {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: var(--bg-primary);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 9999;
+                        transition: opacity 0.5s ease;
+                    }
+
+                    .loading-screen.fade-out {
+                        opacity: 0;
+                    }
+
+                    .loading-content {
+                        text-align: center;
+                    }
+
+                    .loading-spinner {
+                        display: inline-block;
+                        position: relative;
+                        width: 80px;
+                        height: 80px;
+                        margin-bottom: 2rem;
+                    }
+
+                    .spinner-ring {
+                        box-sizing: border-box;
+                        display: block;
+                        position: absolute;
+                        width: 64px;
+                        height: 64px;
+                        margin: 8px;
+                        border: 8px solid var(--primary-color);
+                        border-radius: 50%;
+                        animation: spinner-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                        border-color: var(--primary-color) transparent transparent transparent;
+                    }
+
+                    .spinner-ring:nth-child(1) { animation-delay: -0.45s; }
+                    .spinner-ring:nth-child(2) { animation-delay: -0.3s; }
+                    .spinner-ring:nth-child(3) { animation-delay: -0.15s; }
+
+                    @keyframes spinner-ring {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+
+                    .loading-title {
+                        font-size: var(--font-size-2xl);
+                        font-weight: 600;
+                        color: var(--text-primary);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .loading-subtitle {
+                        color: var(--text-secondary);
+                    }
+
+                    .error-screen {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 100vh;
+                        background: var(--bg-primary);
+                    }
+
+                    .error-content {
+                        text-align: center;
+                        padding: 2rem;
+                    }
+
+                    .scroll-to-top {
+                        position: fixed;
+                        bottom: 2rem;
+                        right: 2rem;
+                        width: 50px;
+                        height: 50px;
+                        background: var(--gradient-primary);
+                        color: white;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        box-shadow: var(--shadow-lg);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: scale(0.8);
+                        transition: all 0.3s ease;
+                        z-index: 1000;
+                    }
+
+                    .scroll-to-top.show {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: scale(1);
+                    }
+
+                    .scroll-to-top:hover {
+                        transform: scale(1.1);
+                        box-shadow: var(--shadow-lg);
+                    }
+                `;
+            }
+
+            getAboutStyles() {
+                return `
+                    .about-content {
+                        gap: 4rem;
+                        align-items: start;
+                    }
+
+                    .about-description {
+                        font-size: var(--font-size-lg);
+                        color: var(--text-secondary);
+                        line-height: 1.7;
+                        margin-bottom: 2rem;
+                    }
+
+                    .about-highlights {
+                        margin-bottom: 3rem;
+                    }
+
+                    .highlight-item {
+                        margin-bottom: 2rem;
+                        padding-left: 1.5rem;
+                        position: relative;
+                    }
+
+                    .highlight-item::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.5rem;
+                        width: 8px;
+                        height: 8px;
+                        background: var(--primary-color);
+                        border-radius: 50%;
+                    }
+
+                    .highlight-item h4 {
+                        font-size: var(--font-size-lg);
+                        font-weight: 600;
+                        color: var(--text-primary);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .highlight-item p {
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                    }
+
+                    .about-cta {
+                        display: flex;
+                        gap: 1rem;
+                        flex-wrap: wrap;
+                    }
+
+                    .stats-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                        margin-bottom: 3rem;
+                    }
+
+                    .stat-box {
+                        background: var(--bg-primary);
+                        border: 1px solid var(--border-color);
+                        border-radius: 12px;
+                        padding: 2rem 1rem;
+                        text-align: center;
+                        box-shadow: var(--shadow-sm);
+                        transition: all 0.3s ease;
+                    }
+
+                    .stat-box:hover {
+                        transform: translateY(-4px);
+                        box-shadow: var(--shadow-md);
+                    }
+
+                    .stat-number {
+                        font-size: var(--font-size-3xl);
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        display: block;
+                        line-height: 1;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .stat-label {
+                        font-size: var(--font-size-sm);
+                        color: var(--text-secondary);
+                        font-weight: 500;
+                    }
+
+                    .education-info,
+                    .awards-info {
+                        margin-bottom: 3rem;
+                    }
+
+                    .education-info h3,
+                    .awards-info h3 {
+                        font-size: var(--font-size-xl);
+                        font-weight: 600;
+                        color: var(--text-primary);
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .education-item {
+                        background: var(--bg-primary);
+                        border: 1px solid var(--border-color);
+                        border-radius: 12px;
+                        padding: 1.5rem;
+                        box-shadow: var(--shadow-sm);
+                    }
+
+                    .education-item h4 {
+                        font-size: var(--font-size-lg);
+                        font-weight: 600;
+                        color: var(--text-primary);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .education-item p {
+                        color: var(--text-secondary);
+                        margin-bottom: 0.75rem;
+                    }
+
+                    .education-year,
+                    .education-gpa {
+                        display: inline-block;
+                        font-size: var(--font-size-sm);
+                        color: var(--text-light);
+                        margin-right: 1rem;
+                    }
+
+                    .awards-list {
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .awards-list li {
+                        padding: 0.75rem 0;
+                        padding-left: 1.5rem;
+                        position: relative;
+                        color: var(--text-secondary);
+                        border-bottom: 1px solid var(--border-color);
+                    }
+
+                    .awards-list li:last-child {
+                        border-bottom: none;
+                    }
+
+                    .awards-list li::before {
+                        content: '🏆';
+                        position: absolute;
+                        left: 0;
+                        font-size: 1.2em;
+                    }
+
+                    @media (max-width: 768px) {
+                        .about-content {
+                            grid-template-columns: 1fr;
+                            gap: 2rem;
+                        }
+
+                        .stats-grid {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .about-cta {
+                            flex-direction: column;
+                        }
+                    }
+                `;
+            }
+
+            getFooterStyles() {
+                return `
+                    .footer {
+                        background: var(--text-primary);
+                        color: white;
+                        padding: 3rem 0 1rem;
+                        margin-top: 4rem;
+                    }
+
+                    .footer-content {
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        gap: 3rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    .footer-brand h3 {
+                        font-size: var(--font-size-2xl);
+                        font-weight: 700;
+                        margin-bottom: 0.5rem;
+                        background: var(--gradient-primary);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+
+                    .footer-brand p {
+                        color: #9ca3af;
+                    }
+
+                    .footer-links {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 2rem;
+                    }
+
+                    .footer-section h4 {
+                        font-size: var(--font-size-lg);
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+
+                    .footer-section ul {
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .footer-section li {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .footer-section a {
+                        color: #9ca3af;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                    }
+
+                    .footer-section a:hover {
+                        color: white;
+                    }
+
+                    .footer-bottom {
+                        border-top: 1px solid #374151;
+                        padding-top: 2rem;
+                        text-align: center;
+                        color: #9ca3af;
+                    }
+
+                    .footer-bottom p {
+                        margin-bottom: 0.5rem;
+                    }
+
+                    @media (max-width: 768px) {
+                        .footer-content {
+                            grid-template-columns: 1fr;
+                            gap: 2rem;
+                        }
+
+                        .footer-links {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                `;
+            }
+        }
+
+        // Initialize the portfolio when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new Portfolio();
+        });
+
+        // Add global utility functions
+        window.closeModal = function() {
+            const modal = document.querySelector('.modal-overlay');
+            if (modal) {
+                modal.classList.remove('show');
+                setTimeout(() => modal.remove(), 300);
+            }
+        };
     </script>
-    -->
 </body>
 </html>

@@ -5,8 +5,7 @@ class Header {
     }
 
     init() {
-        this.render();
-        this.attachEventListeners();
+        // Component will be rendered by main app
     }
 
     render() {
