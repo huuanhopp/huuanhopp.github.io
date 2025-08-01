@@ -10,7 +10,7 @@ class Experience {
                 description: "Leading development of Mosan e-wallet application for Timor market",
                 achievements: [
                     "Managing team of 8 members (3 backend, 3 frontend, 2 testers)",
-                    "Optimized application performance with callback, memo techniques", 
+                    "Optimized application performance with callback, memo techniques",
                     "Published reusable libraries on NPM",
                     "Mentored and trained team members on best practices"
                 ],
@@ -99,9 +99,7 @@ class Experience {
             <div class="timeline-item ${isEven ? 'timeline-left' : 'timeline-right'}" data-experience="${experience.id}">
                 <div class="timeline-content">
                     <div class="timeline-card card">
-                        <div class="timeline-badge ${experience.type}">
-                            ${this.getIcon(experience.type)}
-                        </div>
+
                         
                         <div class="card-header">
                             <h3 class="card-title">${experience.title}</h3>
@@ -133,6 +131,9 @@ class Experience {
                                 </div>
                             </div>
                         </div>
+                        <div class="timeline-badge ${experience.type}">
+                            ${this.getIcon(experience.type)}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,7 +162,7 @@ class Experience {
     attachEventListeners() {
         // Intersection Observer for animations
         const timelineItems = document.querySelectorAll('.timeline-item');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -213,7 +214,7 @@ class Experience {
                 width: 2px;
                 height: 100%;
                 background: var(--gradient-primary);
-                z-index: 5;
+                z-index: 0;
             }
 
             .timeline-item {
