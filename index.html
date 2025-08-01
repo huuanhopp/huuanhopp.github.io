@@ -1,10 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Luong Huu Anh - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luong Huu Anh - Experienced React Native Developer & Team Leader with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
+    <meta name="keywords" content="React Native Developer, Mobile App Developer, Team Leader, JavaScript, iOS, Android, Vietnam Developer">
+    <meta name="author" content="Luong Huu Anh">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://huuanhopp.github.io/">
+    <meta property="og:title" content="Luong Huu Anh - React Native Developer & Team Leader">
+    <meta property="og:description" content="Experienced React Native Developer with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
+    <meta property="og:image" content="https://huuanhopp.github.io/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://huuanhopp.github.io/">
+    <meta property="twitter:title" content="Luong Huu Anh - React Native Developer & Team Leader">
+    <meta property="twitter:description" content="Experienced React Native Developer with 5+ years in mobile app development. Specializing in high-performance, scalable mobile applications.">
+    <meta property="twitter:image" content="https://huuanhopp.github.io/assets/og-image.jpg">
+
+    <title>Luong Huu Anh - React Native Developer & Team Leader</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Preload critical scripts -->
+    <link rel="preload" href="js/app.js" as="script">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Luong Huu Anh",
+        "jobTitle": "React Native Developer & Team Leader",
+        "description": "Experienced React Native Developer with 5+ years in mobile app development",
+        "url": "https://huuanhopp.github.io/",
+        "sameAs": [
+            "https://linkedin.com/in/luonghuuanh",
+            "https://github.com/huuanhopp"
+        ],
+        "knowsAbout": [
+            "React Native",
+            "Mobile App Development",
+            "Team Leadership",
+            "JavaScript",
+            "Redux",
+            "Firebase",
+            "iOS Development",
+            "Android Development"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Transport and Communications",
+            "location": "Vietnam"
+        },
+        "award": [
+            "Employee of the Year 2022",
+            "Third Prize - Scientific Research Competition 2020",
+            "Second Prize - Computer Science Olympiad 2020"
+        ]
+    }
+    </script>
 </head>
 <body>
-<h1>My Portfolio</h1>
-<p>Welcome to my portfolio!</p>
+    <!-- Content will be dynamically loaded by JavaScript -->
+
+    <!-- Fallback content for users with JavaScript disabled -->
+    <noscript>
+        <div style="text-align: center; padding: 4rem 2rem; font-family: 'Inter', sans-serif;">
+            <h1>Luong Huu Anh</h1>
+            <h2>React Native Developer & Team Leader</h2>
+            <p>This portfolio requires JavaScript to display properly. Please enable JavaScript in your browser.</p>
+            <p>Contact: <a href="mailto:luonghuuanh.dev@gmail.com">luonghuuanh.dev@gmail.com</a></p>
+        </div>
+    </noscript>
+
+    <!-- Load JavaScript components -->
+    <script src="js/components/Header.js"></script>
+    <script src="js/components/Hero.js"></script>
+    <script src="js/components/Experience.js"></script>
+    <script src="js/components/Skills.js"></script>
+    <script src="js/components/Projects.js"></script>
+    <script src="js/components/Contact.js"></script>
+
+    <!-- Main application script -->
+    <script src="js/app.js"></script>
+
+    <!-- Analytics (Optional - add your tracking ID) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
 </body>
 </html>
