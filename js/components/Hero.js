@@ -384,12 +384,14 @@ class Hero {
                     align-items: center;
                     gap: 0.75rem;
                     margin-bottom: 2rem;
+                    width: 100%;
                 }
                 
                 .btn {
                     width: 100%;
                     max-width: 280px;
                     justify-content: center;
+                    margin: 0 auto;
                 }
 
                 .hero-stats {

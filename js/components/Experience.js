@@ -413,8 +413,9 @@ class Experience {
 
                 .timeline-left .timeline-badge,
                 .timeline-right .timeline-badge {
-                    left: 6px;
+                    left: 21.5px;
                     right: auto;
+                    transform: translateX(-50%) translateY(-50%);
                     width: 40px;
                     height: 40px;
                     border-width: 2px;
@@ -469,7 +470,8 @@ class Experience {
                 
                 .timeline-left .timeline-badge,
                 .timeline-right .timeline-badge {
-                    left: 1px;
+                    left: 16.5px;
+                    transform: translateX(-50%) translateY(-50%);
                     width: 32px;
                     height: 32px;
                 }
