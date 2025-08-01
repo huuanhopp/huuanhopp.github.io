@@ -81,7 +81,7 @@ class Experience {
                     <div class="section-header text-center mb-6">
                         <h2 class="section-title">Professional Experience</h2>
                         <p class="section-subtitle">
-                            5+ years of mobile development expertise across various industries
+                            6+ years of mobile development expertise across various industries
                         </p>
                     </div>
                     
@@ -147,17 +147,21 @@ class Experience {
     getIcon(type) {
         const icons = {
             current: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9s9-4.45 9-9V7z"></path>
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        <circle cx="12" cy="8" r="2" fill="currentColor"></circle>
                       </svg>`,
             leadership: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="9" cy="7" r="4"></circle>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                          <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                          <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                          <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                          <rect x="3" y="16" width="7" height="5" rx="1"></rect>
                         </svg>`,
             development: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                           <polyline points="16,18 22,12 16,6"></polyline>
-                           <polyline points="8,6 2,12 8,18"></polyline>
+                           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                           <line x1="8" y1="21" x2="16" y2="21"></line>
+                           <line x1="12" y1="17" x2="12" y2="21"></line>
+                           <path d="M6 8l4 4-4 4M14 12h4"></path>
                          </svg>`
         };
         return icons[type] || icons.development;

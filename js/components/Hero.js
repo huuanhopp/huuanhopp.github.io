@@ -34,7 +34,7 @@ class Hero {
                                 <span class="typewriter-cursor">|</span>
                             </div>
                             <p class="hero-description animate-fadeInUp">
-                                Experienced React Native developer with 5+ years of expertise in mobile app development,
+                                Experienced React Native developer with 6+ years of expertise in mobile app development,
                                 team leadership, and system architecture. Passionate about creating scalable, 
                                 user-friendly applications that make a difference.
                             </p>
@@ -56,7 +56,7 @@ class Hero {
                             
                             <div class="hero-stats">
                                 <div class="stat">
-                                    <span class="stat-number">5+</span>
+                                    <span class="stat-number">6+</span>
                                     <span class="stat-label">Years Experience</span>
                                 </div>
                                 <div class="stat">
@@ -64,7 +64,7 @@ class Hero {
                                     <span class="stat-label">App Downloads</span>
                                 </div>
                                 <div class="stat">
-                                    <span class="stat-number">15+</span>
+                                    <span class="stat-number">30+</span>
                                     <span class="stat-label">Projects Completed</span>
                                 </div>
                             </div>
@@ -73,9 +73,10 @@ class Hero {
                         <div class="hero-image">
                             <div class="hero-avatar">
                                 <div class="avatar-placeholder">
-                                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
+                                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                        <path d="M8 6h8M8 10h8M8 14h5"></path>
                                     </svg>
                                 </div>
                                 <div class="avatar-ring"></div>
